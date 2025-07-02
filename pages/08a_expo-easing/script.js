@@ -36,13 +36,20 @@ fab.addEventListener('click', () => {
         y: y,
         opacity: 1,
         rotate: 360,
-        duration: 0.5,
+        duration: i * 0.5,
         ease: 'expo.out',
+        scale: 1.1,
+      });
+      gsap.to(fab, {
+        scale: 1,
       });
     });
   } else {
     children.forEach((child) => {
       // 🔜 Collapse animation will go here
+      gsap.to(fab, {
+        scale: 1.2,
+      });
       gsap.to(child, {
         x: 0,
         y: 0,
